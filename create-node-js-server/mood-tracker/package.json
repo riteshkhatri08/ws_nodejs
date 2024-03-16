@@ -1,0 +1,17 @@
+{
+  "name": "mood-tracker",
+  "version": "1.0.0",
+  "description": "A basic modd tracker app",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js"
+  },
+  "keywords": [
+    "node",
+    "mood",
+    "tracker"
+  ],
+  "author": "Ritesh Khatri",
+  "license": "ISC"
+}
