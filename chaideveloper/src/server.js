@@ -1,7 +1,12 @@
+//   get variable values from '.env config file'
+require("dotenv").config();
+
 const serverStart = function () {
   const express = require("express");
   const app = express();
-  const port = 3000;
+
+  // get portnumber from .env files
+  const port = process.env.PORT;
 
   app.get("/", (req, res) => {
     res.send("Hello World!");
