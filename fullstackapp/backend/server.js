@@ -8,12 +8,25 @@ const app = express();
 dotenv.config();
 
 // define app port
-const PORT = process.env.PORT;
+const PORT = process.env.PORT || 3000;
 
 //add a  GET request mapping
 app.get("/hello", (req, res) => {
   console.log(new Date(), "INFO - Served request at /hello");
   res.send("Hey there !");
+});
+
+// Add another route that returns 5 jokes
+app.get("/jokes", (req, res) => {
+  const jokes = [
+    { id: 1, title: "joke1", content: "Ha" },
+    { id: 2, title: "joke2", content: "HaHa" },
+    { id: 3, title: "joke3", content: "HaHaHa" },
+    { id: 4, title: "joke4", content: "HaHaHaHaH" },
+    { id: 5, title: "joke5", content: "HaHaHaHaHa" },
+  ];
+
+  res.send(jokes);
 });
 
 // start app to listen for requests on port 3000
