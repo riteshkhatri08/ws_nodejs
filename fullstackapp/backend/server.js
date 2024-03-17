@@ -17,12 +17,12 @@ app.get("/hello", (req, res) => {
 });
 
 // Add another route that returns 5 jokes
-app.get("/jokes", (req, res) => {
+app.get("/api/jokes", (req, res) => {
   const jokes = [
     { id: 1, title: "joke1", content: "Ha" },
     { id: 2, title: "joke2", content: "HaHa" },
     { id: 3, title: "joke3", content: "HaHaHa" },
-    { id: 4, title: "joke4", content: "HaHaHaHaH" },
+    { id: 4, title: "joke4", content: "HaHaHaHa" },
     { id: 5, title: "joke5", content: "HaHaHaHaHa" },
   ];
 
