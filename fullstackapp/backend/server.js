@@ -1,9 +1,11 @@
-const express = require("express");
+import express from "express";
+import dotenv from "dotenv";
+
 // create express app instance
 const app = express();
 
-// Load properties from .env file
-require("dotenv").config();
+// To load properties from .env file
+dotenv.config();
 
 // define app port
 const PORT = process.env.PORT;
