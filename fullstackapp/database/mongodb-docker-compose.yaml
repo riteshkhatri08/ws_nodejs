@@ -1,0 +1,22 @@
+services:
+  mongo:
+    image: mongo
+    restart: on-failure
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: "ritesh"
+      MONGO_INITDB_ROOT_PASSWORD: "ritesh"
+    networks:
+      - services
+    ports:
+      - "27017:27017"
+    volumes:
+      - mongodb-data:/data/db
+      - mongodb-log:/var/log/mongodb
+volumes:
+  mongodb-data:
+    driver: local
+  mongodb-log:
+    driver: local
+networks:
+  services:
+    name: services

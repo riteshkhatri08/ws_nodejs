@@ -1,11 +1,15 @@
 import express from "express";
 import dotenv from "dotenv";
+import initdb from "./database.js";
 
 // create express app instance
 const app = express();
 
 // To load properties from .env file
 dotenv.config();
+
+// connect db
+initdb();
 
 // define app port
 const PORT = process.env.PORT || 3000;
